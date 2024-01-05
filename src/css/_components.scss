@@ -1,0 +1,111 @@
+#submit{
+    border: 2px solid darken( $addmealbuttoncolor, 10%);
+    border-radius: 5px;
+    background-color: $addmealbuttoncolor;
+    color: white;
+    font-size: 21px;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#submit:hover{
+    background-color: darken($addmealbuttoncolor, 15%);
+}
+
+.login{
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+//update buttons for bookings and meals
+.upd, .update{
+    background-color: $updatebuttoncolor;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    color: white;
+    font-size: 2.3vh;
+    border: 2px solid darken($updatebuttoncolor, 15%);
+    border-radius: 8px;
+
+    @include phone{
+        font-size: 2vh;
+    }
+}
+
+//delete buttons for bookings and meals
+.del, .delete{
+    background-color: $deletebuttoncolor;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    color: white;
+    font-size: 2.3vh;
+    border: 2px solid darken($deletebuttoncolor, 10%);
+    border-radius: 8px;
+}
+
+.del:hover{
+    background-color: darken($deletebuttoncolor, 10%);
+    ;
+}
+
+.delete:hover{
+    background-color: darken($deletebuttoncolor, 10%)
+}
+
+.upd:hover{
+    background-color: darken($updatebuttoncolor, 10%);
+}
+
+.update:hover{
+    background-color: darken($updatebuttoncolor, 10%);
+}
+
+//logout button
+#logout{
+    background-color: $logoutbuttoncolor;
+    color: white;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    border: 2px solid darken($logoutbuttoncolor, 15%);
+    border-radius: 8px;
+    font-size: 2.5vh;
+    margin-left: 70vw;
+
+    @include tablet{
+        margin-left: 55vw;
+        font-size: 2.7vh;
+    }
+
+    @include phone{
+        margin-left: 55vw;
+        font-size: 3vh;
+    }
+}
+
+#logout:hover{
+    background-color: darken($logoutbuttoncolor, 10%);
+}
+
+//linksfor navigation between parts of the administration page
+.innerLink{
+    background-color: $header-color;
+    color: lighten($header-logo, 30%);
+    text-decoration: none;
+    padding: 1vh;
+    border-radius: 5px;
+}
+
+.innerLink:hover{
+    color: $header-color;
+    background-color: $header-logo;
+}

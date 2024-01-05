@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html>
+
+<html lang="sv">
+
+<head>
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Pizza Box. Admin Page </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">  
+ 
+  <script>
+    if(!localStorage.getItem('token')){
+      window.location.replace('login.html');
+    }
+  
+  </script>
+  
+
+</head>
+<body>
+<header> <h1 id="logo">Pizza Box</h1> 
+  
+</header>
+
+    <section class="container">
+
+      <button id="logout" onclick=logoutUser()>Logga ut</button>
+<h2 id="adminHeader">ADMIN</h2>
+
+<p>Go to: <a class="innerLink" href="#menu">Menu</a> <a class="innerLink" href="#mealForm">Add new meal</a></p>
+<div id="book">
+  <h3>Bookings</h3>
+  <span id="message"></span>
+  <div id="bookings"></div>
+  
+  
+</div>
+<div id="menu">
+  <h3>Menu</h3>
+  <p>Go to: <a class="innerLink" href="#bookings">Bookings</a> <a class="innerLink" href="#mealForm">Add new meal</a></p>
+<h4>Pizza</h4>
+  <div id="pizza"></div>
+  <h4>Pasta</h4>
+  <div id="pasta"></div>
+  <h4>Drinks</h4>
+  <div id="drinks"></div>
+  <h4>Desserts</h4>
+  <div id="desserts"></div>
+</div>
+<!--Check inloggning-->
+<p>
+<script>
+  //if there is no token in the local storage, redirect to the login.html
+  if(!localStorage.getItem('token')){
+    window.location.replace('https://studenter.miun.se/~alku2200/writeable/webbutveckling3/admin/pub/login.html');
+  }
+
+</script>
+
+</p>
+<!--Check if I can sort past bookings and upcoming to defferent divs-->
+
+        <form id="mealForm">
+          <h3>Add new meal</h3>
+          
+            <label for="mealName">Meal name:</label><br>
+            <input type="text" id="mealName" name="mealName" required><br>
+            <label for="category">Choose category:</label><br>
+            <select id="category" name="category" form="mealForm">
+              <option value="Pizza">Pizza</option>
+              <option value="Pasta">Pasta</option>
+              <option value="Drink">Drink</option>
+              <option value="Dessert">Dessert</option>
+            </select><br>
+            <label for="description">Description:</label><br>
+            <input type="text" id="description" name="description" required><br>
+            <label for="price">Price:</label><br>
+            <input type="number" id="price" name="price" required><br>
+            <br>
+           
+           
+            <input type="submit" value="Add meal" id="submit">
+          </form>
+          <br>
+          <p>Go to: <a class="innerLink" href="#menu">Menu</a> <a class="innerLink" href="#bookings">Bookings</a></p>
+
+         
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+<p>Aleksandra Kuzeleva. 2023</p>
+</footer>
+<script src="js/main/main.js"></script>
+</body>
+</html>
